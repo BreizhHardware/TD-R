@@ -10,17 +10,17 @@ temps_total <- 30
 # Proba n'importe quel minute
 p_min <- 1 / temps_total
 # Calcul de P(10 <= X <= 15)
-p10_X_15 <- 5 * p_min
+p10_X_15 <- (15-10) * p_min
 # Calcul de P(25 <= X <= 30)
-p25_X_30 <- 5 * p_min
+p25_X_30 <- (30-25) * p_min
 # Calcul p_moins_5_min
 p_moins_5_min <- p10_X_15 + p25_X_30
 print(p_moins_5_min)
 
 # Calcul de P(0 < X < 5)
-p0_X_5 <- 4 * p_min
+p0_X_5 <- (5-(0+1)) * p_min
 # Calcul de P(15 < X < 20)
-p15_X_20 <- 4 * p_min
+p15_X_20 <- (20-(15+1)) * p_min
 # Calcul p_plus_de_10_min
 p_plus_de_10_min <- p0_X_5 + p15_X_10
 print(p_plus_de_10_min)
