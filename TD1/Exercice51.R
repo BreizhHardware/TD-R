@@ -30,7 +30,7 @@ y_vals <- f(x_vals)
 integrale_rect <- sum(y_vals * dx)
 
 print(integrale_rect)
-plot(x_vals, y_vals, type = "list", col = "blue", lwd = 2,
+plot(x_vals, y_vals, type = "l", col = "blue", lwd = 2,
      main = "Methode des rectangles pour l'integrale",
      xlab = "x", ylab = "f(x)")
 rect(x_vals[-n], 0, x_vals[-1], y_vals[-n], col = rgb(0, 0, 1, 0.2), border = NA)
