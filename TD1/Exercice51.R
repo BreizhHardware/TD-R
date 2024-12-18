@@ -14,3 +14,10 @@ F <- function(x) {
 cible <- 1 - 10^(-5)
 capacite <- uniroot(function(x) F(x) - cible, lower = 0, upper = 1)$root
 print(capacite * 1000)
+# c) (Bonus) Calculer l'espérence
+fonction_esperance <- function (x) {
+  x * c * (1 - x)^4
+}
+
+esperance <- integrate(fonction_esperance, lower = 0, upper = 1)$value
+print(esperance)
