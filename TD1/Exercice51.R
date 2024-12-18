@@ -16,8 +16,21 @@ capacite <- uniroot(function(x) F(x) - cible, lower = 0, upper = 1)$root
 print(capacite * 1000)
 # c) (Bonus) Calculer l'espérence
 fonction_esperance <- function (x) {
-  x * c * (1 - x)^4
+  x * c * f(x)
 }
 
 esperance <- integrate(fonction_esperance, lower = 0, upper = 1)$value
 print(esperance)
+
+# d) (Bonus) Faire avec la méthode des réctangle et tracer le graphique de la construction
+n <- 15
+dx <- 1 / n
+x_vals <- seq(0, 1, length.out = n)
+y_vals <- f(x_vals)
+integrale_rect <- sum(y_vals * dx)
+
+print(integrale_rect)
+plot(x_vals, y_vals, type = "list", col = "blue", lwd = 2,
+     main = "Methode des rectangles pour l'integrale",
+     xlab = "x", ylab = "f(x)")
+rect(x_vals[-n], 0, x_vals[-1], y_vals[-n], col = rgb(0, 0, 1, 0.2), border = NA)
