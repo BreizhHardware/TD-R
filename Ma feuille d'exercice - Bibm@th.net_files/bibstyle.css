@@ -1,0 +1,1766 @@
+@media screen and (min-width:728px) {
+	
+#pubhaute{
+		padding-top:20px;
+	padding-left:10px;
+	margin:auto;
+    	width:728px;
+}
+
+.r89-desktop-leaderboard-atf
+{
+		padding-top:20px;
+	padding-left:10px;
+	margin:auto;
+    	width:728px;
+}	
+
+.r89-mobile-billboard-top
+{
+	display:none;
+}
+
+}
+
+@media screen and (max-height: 750px) and (min-width:728px) {
+	
+#sas_relative_container_26328{
+	display:none;
+}
+
+#r89-desktop-billboard-low-1-0-wrapper{
+	display:none;
+}
+
+#r89-desktop-billboard-low-0-wrapper{
+	display:none;
+}
+	
+}
+
+@media screen and (max-width:727px) {
+	
+#pubhaute{
+	width:100%;
+	margin-bottom:8px;
+	margin-top:60px;
+}
+
+.r89-mobile-billboard-top
+{
+	width:100%;
+	margin-bottom:8px;
+	margin-top:60px;	
+}
+
+.r89-desktop-leaderboard-atf
+{
+	display:none;
+}
+
+	
+}
+
+
+
+
+@media screen and (min-width: 1074px)
+{	
+ 
+#bandeaucentre {
+ 	width:1074px;
+}	
+
+#menuhautcentre {
+	width:1074px;	
+}
+
+#sousmenuhautcentre {
+	width:1074px;
+}
+
+
+#maincentre {
+	width:1074px;	
+}
+
+
+#mainforum {
+	width:1074px;	
+}
+
+#piedcentre {
+	width:1074px;
+}
+
+#droite 
+{
+	font-size:0.9em;
+	display:flex;
+	flex-direction:column;
+	align-items:center;	
+	width:310px;
+	padding-top:10px;
+	padding-right:10px;
+	padding-left:10px;
+	margin-left:10px;
+	margin-top:10px;
+	border-width: 0px 0px 0px 1px;
+	border-style:solid;
+	border-color:rgb(212,212,212);
+
+}
+
+
+.stickypubdroite {
+	position:sticky;
+	top:50px;
+}
+
+#pubdroite
+{
+}
+
+.contenudroite 
+{
+	width:300px;
+	margin-bottom:30px;
+	padding-left:0px;
+	padding-bottom:10px;
+	font-family:"Verdana";
+}
+
+.contenudroite li {
+	background: url(../img/puce.png) no-repeat left 3px;	
+	font-size:0.9em;
+	margin-left:10px;
+	padding-left:20px;
+	list-style:none;
+}
+
+.contenudroite h1 {
+	background: white;	
+	height: 20px;
+  margin-bottom: 15px;
+	min-height: 20px;
+	vertical-align: middle;
+  white-space: nowrap;
+  color: rgb(0,119,24);
+  font-size: 1.3em;
+  font-variant:small-caps;
+  font-weight:bold;
+  text-align:center;
+}
+
+.bascontenu {
+	margin-top:10px;
+	background: url(../img/main.png) no-repeat left center;
+	padding-left:20px;
+	margin-left:10px;
+}
+
+#gauche
+{
+	width:754px;
+	padding-bottom:10px;
+}
+
+#pubgauche {
+	padding-top:20px;
+	padding-left:10px;
+	margin-right:10px;
+    	width:728px;	
+}
+
+#pubforum{
+	padding-top:20px;
+	padding-left:10px;
+	margin:auto;
+    	width:728px;	
+}
+
+.cours{
+	font-size:1.1em;
+	text-align:justify;
+	padding-left:10px;
+}
+
+.dliste li {
+	font-size:1.1em;
+	text-align:justify;
+	background: url(../img/puce.png) no-repeat left 4px;
+	list-style-type:none;
+	margin:3px;
+	padding-left: 18px;	
+}
+
+.liste li {
+	background: url(../img/puce.png) no-repeat left 4px;
+	list-style-type:none;
+	margin:3px;
+	padding-left: 18px;
+}
+   
+}
+
+@media screen and (max-width: 1023px) and (min-width:728px) {
+#bandeau {
+   width:100%;
+}
+
+ #bandeaucentre {
+ 	width:100%
+}	
+
+#menuhaut {
+	width:100%
+}
+
+#menuhautcentre {
+	width:100%
+}
+
+#sousmenuhaut {
+	width:100%
+}
+
+#sousmenuhautcentre {
+	width:100%
+}
+
+#maincentre {
+	width:100%
+}
+
+#mainforum {
+	width:100%
+}
+
+#pied {
+	width:100%
+}
+
+#baspied {
+	width:100%
+}
+
+#piedcentre {
+	width:100%
+}
+
+
+#listesousmenuhaut {
+	font-size:0.9em;
+}
+
+#droite {
+	display:none;
+}
+
+#gauche
+{
+	width:100%;
+	padding-bottom:10px;
+}
+
+#pubgauche{
+	margin:auto;
+    	width:728px;	
+}
+
+#pubforum {
+	padding-top:20px;
+	padding-left:10px;
+	margin:auto;
+    width:728px;	
+}
+
+.dliste li {
+	font-size:1.1em;
+	text-align:justify;
+	background: url(../img/puce.png) no-repeat left 4px;
+	list-style-type:none;
+	margin:3px;
+	padding-left: 18px;	
+}
+
+.liste li {
+	background: url(../img/puce.png) no-repeat left 4px;
+	list-style-type:none;
+	margin:3px;
+	padding-left: 14px;
+}
+
+}
+
+@media screen and (min-width:728px) {
+	
+#bandeau {
+    background:rgb(29,125,28);
+   height:50px;
+   overflow:hidden;
+   max-width:1300px;
+   margin-left:auto;
+   margin-right:auto;
+  }	
+  
+#bandeaucentre {
+   display:flex;
+   justify-content:space-between;
+   align-items:center;
+   margin:0px auto;
+   height:50px;
+   background:#229222;
+}  
+	
+#bandeaulogo
+{
+   background:#229222;
+   color:#FFFFFF;
+   font-family:"Avenir Book", "Avenir", "Lucida sans", "Verdana", "Trebuchet MS",sans-serif; 
+   font-size:2.5em;
+   height:50px;
+   padding-left:10px;
+}
+
+#bandeaumilieu
+{
+	display:flex;
+	align-items:center;
+	color:white;
+}
+
+#bandeaumilieu img 
+{
+	margin-left:5px;
+	margin-right:5px;
+}
+
+#bandeaurecherche
+{
+	display:flex;
+	align-items:stretch;
+ 	background:white;
+ 	height:30px;
+ 	overflow:hidden;
+ 	margin-right:10px;
+	border-radius:15px;
+}	
+
+.formulairerecherche
+{
+	margin: 0px;
+}	
+
+.inputrecherche
+{
+	width:223px;
+	font-family:'Source Sans Pro',Helvetiva;
+	font-size:14px;
+	padding-left:12px;
+	padding-top:0px;
+	padding-bottom:0px;
+	height:30px;
+	border:0px;
+	max-height:30px;
+	margin:auto;
+}
+
+.boutonrecherche
+{
+	border:0px;
+	border-radius:0px;
+	width:30px;
+	height:30px;
+	padding:0px;
+	margin-right:10px;
+	font-size:0px;
+	border:none;
+   /* background: url(../img/recherche.png);*/
+   background:white;
+   /* background-position:0px 4px; */
+}
+
+#menuhaut {
+	background:rgb(76,153,0);
+   overflow:hidden;
+   max-width:1300px;
+   margin-left:auto;
+   margin-right:auto;	
+}
+
+#menuhautcentre {
+   display:flex;
+   justify-content:space-between;
+   background:rgb(89,178,0);
+   height:40px;
+   overflow:hidden;
+   max-width:1300px;
+   margin-left:auto;
+   margin-right:auto;	
+	
+}
+
+#menuhautgauche, #menuhautdroite {
+	display:flex;
+	align-items:center;
+	background:rgb(89,178,0);
+	height:40px;
+}
+
+#menuhautdroite {
+	margin-left:0px;
+}
+
+#menuhautgauche {
+	margin-right:0px;
+}
+
+#listemenuhaut
+{
+	display:flex;
+	align-items:center;
+}
+
+#listemenuhaut .item
+{
+	display:flex;
+	align-items:center;
+	margin:0;
+	padding-left:10px;
+	padding-right:10px;
+	list-style:none;
+	height:40px;
+	color:#FFFFFF;
+}
+
+#listemenuhaut a
+{
+	color:#FFFFFF;
+	font-style:normal;
+}
+
+#listemenuhaut .itemselectionne
+{
+	display:flex;
+	align-items:center;
+	margin:0;
+	padding-left:10px;
+	padding-right:10px;
+	list-style:none;
+	height:50px;
+	color:#FFFFFF;
+	background:rgb(0,111,24);
+}	
+
+#listemenuhaut .item:hover
+{
+	background:rgb(29,125,28);
+}
+
+
+#listemenuhaut img
+{
+	padding-right:3px;
+}
+
+#sousmenuhaut {
+   background:rgb(238,238,238);
+   height:40px;
+   overflow:hidden;
+   max-width:1300px;
+   margin-left:auto;
+   margin-right:auto;	
+	
+}
+
+#sousmenuhautcentre {
+	display:flex;
+	align-items:center;
+	background:white;
+	height:40px;
+	margin:0px auto;
+}
+
+#listesousmenuhaut {
+	display:flex;
+	align-items:center;
+	height:38px;
+	border-style:solid;
+	border-width:0px 0px 1px 0px;
+	width:97%;
+	border-color:rgb(212,212,212);
+	margin:auto;
+	padding-left:4px;
+	padding-right:4px;
+}	
+
+#listesousmenuhaut a
+{
+	color:#000000;
+	font-style:normal;
+}
+
+.sousmenucontenu{
+	display:flex;
+	align-items:center;	
+	height:38px;
+}
+
+.sousmenuitem{
+	padding-top:7px;
+	padding-left:10px;
+	padding-right:10px;
+	height:38px;
+	box-sizing:border-box;
+}
+
+.sousmenuitem:hover{
+	border-color:#000000;
+	border-style:solid;
+	border-width:0px 0px 1px 0px;
+	box-sizing:border-box;	
+}
+
+.sousmenuitemselectionne
+{
+	padding-top:7px;
+	padding-left:10px;
+	padding-right:10px;
+	height:38px;
+	border-color:rgb(0,156,33);
+	border-style:solid;
+	border-width:0px 0px 3px 0px;
+	box-sizing:border-box;
+}
+
+#main {
+   margin-bottom:5px;
+   margin-left:auto;
+   margin-right:auto;
+   overflow:hidden;
+   max-width:1300px;
+   background:rgb(238,238,238);
+}
+
+#maincentre {
+	display:flex;
+	justify-content:space-between;
+	margin: auto;
+	background:#FFFFFF;
+	min-height:100%;
+	padding-bottom:10px;
+}
+
+#mainforum {
+margin: auto;
+	background:#FFFFFF;
+	min-height:100%;
+	padding-bottom:10px;
+}	
+
+.decale {
+	margin-top:80px;
+}
+
+.fixed {position:fixed;width:100%;top:0;left:0;z-index:9999;}
+
+.fixedpub {position:fixed;top:100px;}
+
+.decalepub {position:static;}
+
+#pied {
+   background:rgb(76,153,0);
+   height:25px;
+   overflow:hidden;
+   max-width:1300px;
+   margin-left:auto;
+   margin-right:auto;	
+	
+}
+
+#baspied {
+background:rgb(29,125,28);
+   height:100px;
+   max-width:1300px;
+   margin-left:auto;
+   margin-right:auto;		
+}   
+
+#piedcentre {
+	display:flex;
+	align-items:center;
+	background:rgb(89,178,0);
+	height:25px;
+	margin:0px auto;
+}
+
+#listepied
+{
+	display:flex;
+	align-items:center;
+}
+
+#listepied .item
+{
+	display:flex;
+	align-items:center;
+	margin:0;
+	padding-left:10px;
+	padding-right:10px;
+	height:25px;
+	color:#FFFFFF;
+}
+
+#listepied a
+{
+	color:#FFFFFF;
+	font-style:normal;
+}
+
+#listepied .item:hover
+{
+	background:rgb(0,111,24);
+}
+
+.imgbios
+{
+	float:right;
+	margin:0.8em;
+	margin-right:0;
+	width:250px;
+}
+
+.imgcontenu
+{
+	width:250px;
+}
+
+.imgdroite
+{
+	float:right;
+	margin:0.8em;
+	margin-right:0;
+}
+
+#contenugauche{
+	padding-top:20px;
+	padding-left:7px;
+	padding-right:7px;
+    width:100%;	
+}
+
+#contenugauche h1 {
+	font-size:1.7em;
+	display:block;
+	width:80%;
+  color: rgb(0,119,24);
+  font-weight:bold;
+  margin:auto;
+  	margin-top:25px;
+  margin-bottom:20px;
+  text-align:center;
+  }
+
+#bandeaumobile
+{
+	display:none;
+}
+
+#recherchemobile
+{
+	display:none;
+}
+
+#pubresponsive
+{
+	display:none;
+}
+
+#menumobile
+{
+	display:none;
+}
+
+#piedmobile
+{
+	display:none;
+}
+
+#baspiedmobile
+{
+	display:none;
+}
+
+.listesurdeuxcolonnes
+{
+    column-count: 2;
+    -webkit-column-count:2;
+    -moz-column-count:2;        
+	padding-left:40px;
+}
+
+.r89-mobile-rectangle-mid
+{
+	display:none;
+}
+
+}
+
+
+
+@media screen and (max-width:727px) {
+
+r89-desktop-InContent
+{
+	display:none;
+}
+
+
+body {
+	margin:0px;
+	box-sizing:border-box;
+}
+
+#bandeau {
+   display:none;
+}
+#menuhaut {
+  display:none;
+  } 
+ 
+.decale {
+}
+
+.fixed {}
+
+#droite{
+	display:none;
+}
+
+/* Pour que la pub pavé droit de The Moneytizer ne s'affiche pas ! */
+
+#sas_26300{ 
+	display:none;
+}
+
+#sousmenuhaut {
+	display:none;
+}
+
+#maincentre {
+	margin:8px;
+}
+
+#mainforum {
+	margin:8px;
+}
+
+#main {
+	margin-top:55px;
+}
+
+
+#pubgauche {
+	display:none;
+}
+
+#pubforum {
+	display:none;
+}
+
+#pied {
+	display:none;
+}
+
+#baspied {
+	display:none;
+}
+
+#bandeaumobile {
+   position:fixed;
+   top:0px;
+   width:100%;
+   height:45px;
+   background:#229222;	
+	font-family:"Avenir Book", "Avenir", "Lucida sans", "Verdana", "Trebuchet MS",sans-serif; 
+	font-size:1.5em;	
+	color:#FFFFFF;
+	font-variant:small-caps;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	z-index:100;
+}
+
+#bandeaumobile img {
+	height:32px;
+	width:32px;
+}
+
+#bandeaumobile a {
+	display:flex;
+}
+
+.sousbandeaumobile
+{
+	height:45px;
+	display:flex;
+	align-items:center;
+}
+
+#recherchemobile {
+	margin-top:45px;
+	width:100%;
+	z-index:100;
+	display:none;
+	background-color:rgb(24,104,24);
+	height:56px;
+	overflow:hidden;
+	padding:10px 10px;
+	box-sizing:border-box;
+}
+
+#formrecherchemobile {
+	background-color:white;	
+	height:30px;
+	width:100%;	
+	display:table;
+	border-spacing:5px;
+}
+
+.divinputrecherche{
+	display:table-cell;
+	vertical-align:middle;
+	height:24px;
+}
+
+.inputrecherche
+{
+	font-family:'Source Sans Pro',Helvetica;
+	padding-top:0px;
+	padding-bottom:0px;
+	height:24px;
+	border:0px;
+	font-size:1em;
+	width:100%;
+}
+
+.divboutonmobile{
+	        display:table-cell;
+	vertical-align:middle;   
+	width:30px;
+}
+
+.boutonrecherche
+{
+	border:0px;
+	border-radius:0px;
+	width:28px;
+	height:24px;
+	padding:0px;
+	font-size:0px;
+	border:none;
+        background: transparent url(../img/recherche.png) no-repeat;     
+        box-sizing:border-box;
+}
+
+
+
+#menumobile
+{
+	margin-top:45px;
+	width:100%;
+	background:rgb(42,42,42);
+	color:rgb(165,165,165);
+	z-index:100;
+	display:none;
+}
+
+.itemmenumobile
+{
+	box-sizing:border-box;
+	width:100%;	
+	border-style:solid;
+	border-width:0px 0px 1px 10px;
+	border-color:rgb(0,0,0) rgb(0,0,0) rgb(85,85,85) rgb(42,42,42);
+	overflow:hidden;
+	padding-left:10px;
+}
+
+
+.itemmenumobileselectionne
+{
+	box-sizing:border-box;
+	width:100%;	
+	border-style:solid;
+	border-width:0px 0px 1px 10px;
+	border-color:rgb(0,0,0) rgb(0,0,0) rgb(85,85,85) #229222;
+	overflow:hidden;
+	padding-left:10px;
+}
+
+.teteitemmenumobile
+{
+	display:flex;
+	align-items:center;
+	height:46px;
+}
+
+.containermenumobile
+{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+}
+
+.sousmenumobile
+{
+	padding-left:10px;
+	display:none;
+}
+
+.basmenumobile
+{
+	border-style:solid;
+	border-width:0px 0px 1px 0px;
+	border-color:rgb(85,85,85);
+}
+
+.sousitemmenumobile
+{
+	display:flex;
+	align-items:center;
+	width:100%;
+	height:46px;
+	background:rgb(55,55,55);
+	border-style:solid;
+	border-width:0px 0px 1px 0px;
+	border-color: rgb(85,85,85);	
+	padding-left:10px;
+}
+
+.itemmenumobile :last-child{
+	border:none;
+}
+
+
+.itembandeaumobile
+{
+	height:45px;
+	display:flex;
+	align-items:center;
+	border-style:dotted;
+	border-width:0px 0px 0px 1px;
+	border-color:black;
+	padding-left:8px;
+	padding-right:8px;
+	box-sizing:border-box;
+}
+
+.itembandeaumobilesansbordure
+{
+	height:45px;
+	display:flex;
+	align-items:center;	
+	padding-left:8px;
+	padding-right:8px;
+}
+
+.itembandeaumobilefondnoir
+{
+	height:45px;
+	display:none;
+	align-items:center;
+	border-style:dotted;
+	border-width:0px 0px 0px 1px;
+	border-color:black;
+	padding-left:8px;
+	padding-right:8px;
+	background:rgb(42,42,42);
+}
+
+#menumobile img {
+	width:16px;
+	height:16px;
+	padding-left:10px;
+}
+
+#menumobile a 
+{
+	color:rgb(165,165,165);
+	font-style:normal;
+}
+
+#piedmobile, #baspiedmobile{
+   background:#229222;	
+   overflow:hidden;
+   width:100%;	
+	display:flex;
+	align-items:center; 
+	justify-content:space-around;
+}
+
+#baspiedmobile {
+	height:90px;
+}
+
+#piedmobile .item
+{
+	display:flex;
+	align-items:center;
+	margin:0;
+	padding-left:10px;
+	padding-right:10px;
+	height:25px;
+	color:#FFFFFF;
+}
+
+#piedmobile a
+{
+	color:#FFFFFF;
+	font-style:normal;
+}
+
+#pubresponsive 
+{
+	width:100%;
+	margin-bottom:8px;
+	margin-top:60px;
+}
+
+.imgbios {
+	display:block;
+	margin:auto;
+	margin-top:5px;
+	width:300px;
+}
+
+.imgdroite {
+	display:block;
+	margin:auto;
+	margin-top:5px;
+}
+
+
+#contenugauche h1 {
+	display:block;	
+	font-size:1.4em;
+	width:95%;
+  color: rgb(0,119,24);
+  font-weight:bold;
+  margin:auto;
+  	margin-top:15px;
+  text-align:center;
+  }
+  
+ul,ol
+{
+   padding-left:15px;
+}
+  
+ .listesurdeuxcolonnes
+{
+    column-count: 1;
+    -webkit-column-count:1;
+    -moz-column-count:1;        
+} 
+
+.dliste li {
+	font-size:1.1em;
+	text-align:justify;
+	background: url(../img/puce.png) no-repeat left 4px;
+	list-style-type:none;
+	margin:3px;
+	padding-left: 18px;	
+}
+
+.liste li {
+	background: url(../img/puce.png) no-repeat left 4px;
+	list-style-type:none;
+	margin:3px;
+	padding-left: 18px;
+}
+
+.liste ul {
+	padding-left:15px;
+}
+
+.listesurdeuxcolonnes ul {
+	padding-left:15px;
+}
+
+}
+
+@media screen and (max-width:400px) {
+.itembandeaumobilesansbordure
+{
+	display:none;
+}
+}	
+
+
+
+body {
+	FONT-SIZE:1em; 
+	FONT-FAMILY: "Lucida Sans","Trebuchet MS",sans-serif; 
+	background:#ffffff;
+}
+
+* {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+a:link { color:#000080; font-style:italic; text-decoration:none }
+a:visited { color:#000080; font-style:italic; text-decoration:none }
+a:hover {font-style:italic; color: #738CC6}
+a:active { color:#000080; font-style:italic; text-decoration:none}	
+  
+.chemin {
+	font-size:0.8em;
+}
+
+.chemin a {
+	font-style:normal;
+}
+
+.listetexte li {	
+	font-size:1.1em;
+	text-align:justify;
+}
+
+.listesurdeuxcolonnes li {
+	background: url(../img/puce.png) no-repeat left 4px;
+	list-style-type:none;
+	margin:3px;
+	padding-left: 20px;
+}
+
+.separator {
+	font-size: 16px;
+	color: rgb(0,119,24);
+	font-weight:bold;
+	border:1px solid;
+   border-left-color:white;
+   border-right-color:white;
+   border-top-color:white;
+   border-bottom-color:#D3D3D3;
+   margin-top:5px;
+   margin-bottom:10px;
+}
+
+.grastheo{
+    font-family:  Helvetica, Verdana, Arial, sans-serif;	
+    font-weight:bold;
+		
+}
+
+.rougedico{
+  color: #AF0000;	
+  font-weight:bold;
+}
+
+.titrepartie{
+  color:rgb(0,119,24);
+  font-size: 19px;
+  font-weight:bold;
+  font-family:Arial,Helvetica;
+  border:1px solid;
+   border-left-color:white;
+   border-right-color:white;
+   border-top-color:white;
+   border-bottom-color:#D3D3D3;
+   margin-top:10px;
+   margin-bottom:10px;
+}	 
+
+.savoirplus {
+  min-height:80px;
+  margin-bottom:30px;
+  text-align:justify;
+  text-indent:1em;
+  font-family:"Lucida Sans","Trebuchet MS",sans-serif;
+  font-size:1.1em;
+  line-height:1.3em;
+}
+
+.savoirplus img {
+  float:left;
+  }
+
+.equation {
+  text-align:center;
+  margin-bottom:3px;
+  margin-top:3px;
+}
+
+.equation img {
+  float:none;
+  }
+
+.citation {
+	background: #f8f9f0;
+	border-color: #7aadbd;
+	color: #566579;
+	border-style: solid;
+	border-width: 1px 1px 1px 3px;
+	margin: 0.75em 1em;
+	padding: 0.25em 0.75em;
+	text-align:justify;	
+}
+
+.theo{  
+    border-width: 1px 1px 1px 3px;
+    border-style: solid; 
+    border-color: #CCCCCC;
+	background-color: #FFFFDD;
+	margin:10px 10px 10px 10px;
+	padding:3px;
+}
+
+.utheo{  
+    border-width: 1px 1px 1px 3px;
+    border-style: solid; 
+    border-color: #CCCCCC;
+	background-color: #FFFFDD;
+	margin:10px 10px 10px 10px;
+	padding:3px;
+	text-align:justify;	
+}
+
+.theocours{  
+    border-width: 1px 1px 1px 3px;
+    border-style: solid; 
+    border-color: #CCCCCC;
+	background-color: #FFFFDD;
+	margin:10px 10px 10px 10px;
+	padding:3px;
+	font-family:"Lucida Sans","Trebuchet MS",sans-serif;
+	font-size:1.1em;
+	text-align:justify;
+}
+
+.theotexte{
+   border-width: 1px 1px 1px 3px;
+    border-style: solid; 
+    border-color: #CCCCCC;
+	background-color: #FFFFDD;
+	margin:10px 10px 10px 10px;
+	padding:3px;	
+	font-family:"Lucida Sans","Trebuchet MS",sans-serif;
+	font-size:1.1em;
+	text-align:justify;
+	line-height:1.3em;	
+}
+
+.exemple {
+	border-width: 0px 0px 0px 2px;
+	border-style:solid;
+	border-color:#229222;
+	margin-left:2px;
+	padding-left:2px;
+	text-align:justify;
+}
+
+.spoiler {
+	background: #f8f9f0;
+	border-color: #7aadbd;
+	color: #566579;
+	border-style: solid;
+	border-width: 1px 1px 1px 3px;
+	border-radius: 3px;
+	margin: 0.75em 1em;
+	padding: 0 0.75em;
+}
+
+.spoiler .inner
+    {
+    border:1px solid #eee;
+    padding:3px;margin:3px;
+    }
+    
+p.texte::first-letter {
+  font-family:script,cursive;
+  font-size:3em;
+  padding:0.2em 0.1em 0.2em 0.1em;
+  float:left;
+}    
+
+p.texte {
+	text-align:justify;
+	font-family:"Lucida Sans","Trebuchet MS",sans-serif;
+	font-size:1.1em;
+	line-height:1.3em;
+}
+
+p.dtexte {
+	text-align:justify;
+	text-indent:1em;
+	font-family:"Lucida Sans","Trebuchet MS",sans-serif;
+	font-size:1.1em;
+	line-height:1.3em;
+}
+
+p.ntexte {
+	text-align:justify;
+	font-family:"Lucida Sans","Trebuchet MS",sans-serif;
+	font-size:1.1em;
+	line-height:1.3em;	
+}
+
+p.utexte {
+	text-align:justify;
+	text-indent:1em;
+	font-family:"Lucida Sans","Trebuchet MS",sans-serif;
+	font-size:1em;
+	line-height:1.3em;
+}	
+
+p.untexte {
+	text-align:justify;
+	font-family:"Lucida Sans","Trebuchet MS",sans-serif;
+	font-size:1em;
+	line-height:1.3em;
+}	
+
+p.petit {
+	margin-top:0.5em;
+	font-size:0.8em;
+}
+
+.italic {
+	font-style:italic;
+}
+
+.titrelivre {
+	font-style:italic;
+}
+
+/* Le style des listes de lettres pour la recherche alphabétique dans le dictionnaire */
+.circle{
+    margin:2px;
+    width:25px;
+    background:#229222; 
+    height:25px;
+    text-align:center;
+    border-radius:25px;
+    line-height: 25px; 
+	flex:initial;
+}
+
+.circle:hover
+{
+	background:rgb(29,125,28);
+}
+
+.circle a:link {color:#FFFFFF; font-style:normal; text-decoration:none }
+.circle a:visited {color:#FFFFFF; font-style:normal; text-decoration:none }
+.circle a:hover {color:#FFFFFF; font-style:normal; text-decoration:none;  }
+.circle a:active {color:#FFFFFF; font-style:normal; text-decoration:none }
+
+.listedico
+{
+   display:flex;
+   justify-content:flex-start;
+   align-items:center;
+   margin:auto;
+   width:300px;
+}
+
+.formulairebibmath
+{
+	font-size:1em;	
+	width:95%;
+	margin:auto;
+	margin-top:20px;
+	box-sizing:border-box;
+}
+
+.formulairebibmath textarea
+{
+	width:100%;
+	padding: 15px;
+	margin-top: 10px;
+	border:1px solid rgb(0,119,24);
+	border-radius:5px;
+	margin-bottom: 10px;
+	resize:none;	
+	font-size:1em;
+	box-sizing:border-box;
+}
+
+.formulairebibmath textarea:focus
+{
+	outline:none !important;
+	border:3px solid rgb(0,119,24);
+	box-shadow:0;
+	padding:13px;
+	box-sizing:border-box;
+}
+
+.formulairebibmath input[type=text]{
+margin-bottom: 10px;
+margin-top: 10px;
+width:100%;
+padding: 8px;
+border-radius:5px;
+border:1px solid rgb(0,119,24);
+font-size:1em;
+box-sizing:border-box;
+}
+
+.formulairebibmath input[type=number]
+{
+	border-radius:5px;
+	border:1px solid rgb(0,119,24);
+	font-size:1em;
+	padding:6px;
+	box-sizing:border-box;
+}
+
+.formulairebibmath input[type=number]:focus
+{
+	border-radius:5px;
+	border:3px solid rgb(0,119,24);
+	font-size:1em;
+	padding:4px;
+	box-sizing:border-box;
+}
+
+.formulairebibmath input[type=text]:focus
+{
+	outline:none !important;
+	border:3px solid rgb(0,119,24);
+	box-shadow:0;
+	padding:6px;
+}	
+
+.formulairebibmath select{
+margin-bottom: 10px;
+margin-top: 10px;
+width:100%;
+padding: 5px;
+border-radius:5px;
+border:1px solid rgb(0,119,24);
+font-size:1em;
+box-sizing:border-box;
+background-color: rgb(76,153,0);
+color:white;
+}	
+
+.formulairebibmath input[type=submit], .formulairebibmath input[type=button]
+{
+margin-bottom: 20px;
+width:100%;
+padding-top:15px;
+padding-bottom:15px;
+padding-left:0px;
+padding-right:0px;
+border-radius:5px;
+border:1px solid rgb(76,153,0);
+background-color: rgb(76,153,0);
+color: white;
+font-size:1.1em;
+cursor:pointer;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.formulairebibmath input[type=submit]:hover, .formulairebibmath input[type=button]:hover
+{
+background-color: rgb(0,111,24);
+}
+
+table.tablebibmath 
+{
+	border-collapse:collapse;
+	margin: 5px auto;
+	border: 1px solid gray;
+}
+
+.tablebibmath th
+{
+	background-color : rgb(0,111,24);
+	color:white;	
+	border: 1px solid gray;
+}
+
+.tablebibmath th,td
+{
+	padding:5px 10px;
+	vertical-align:middle;
+}
+
+.tablebibmath td
+{
+	border: 1px dotted black;
+}
+
+.tablebibmath tr:nth-child(even) {background: #DDD}
+.tablebibmath tr:nth-child(odd) {background: #EEE}
+
+.tablebibmath tr:hover {
+	background:rgb(76,153,0);
+	color:white;
+}
+
+.boutonstandard{
+	cursor:pointer;
+	border-radius:5px;
+	font-style:verdana;
+	background:linear-gradient(#DDDDDD,#FFFFFF); 
+}
+
+.imgcentre {
+	display:block;
+	margin:0.8em auto;
+	max-width:98%;
+}
+
+.boutonsvideo{
+	cursor:pointer; 
+	border-radius:5px;
+	background:linear-gradient(#DDDDDD,#FFFFFF); 
+	font-style:verdana;
+	height:30px;
+	padding-bottom:5px;
+	padding-top:5px;
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.boutonsvideo span
+{
+	background:url(../img/youtubefleche.png) no-repeat 0px -4px;
+	padding-left:30px;
+}
+
+
+.boutonsvideo:hover{
+	background:linear-gradient(#CCCCCC,#EEEEEE);
+}
+
+/*  La "carte" affichée sur la page d'accueil */
+
+.cardephemeride
+{width:95%;
+box-sizing:border-box;
+display:-webkit-box;display:-ms-flexbox;display:flex;
+-ms-flex-direction:row;flex-direction:row;
+align-items:stretch;
+line-height:1.5;
+margin-bottom:1.5em;
+margin-left:1em;
+margin-right:1em;
+border-bottom-width:1px;
+border-bottom-style:dotted;
+border-bottom-color:rgb(142, 142, 142);
+}
+
+.cardephemeride a:link { color:#000080; font-style:normal; text-decoration:none }
+.cardephemeride a:visited { color:#000080; font-style:normal; text-decoration:none }
+.cardephemeride a:hover {font-style:italic; font-style:normal; color: #738CC6}
+.cardephemeride a:active { color:#000080; font-style:normal; text-decoration:none}	
+
+.titrepartie a:link {   color:rgb(0,119,24); font-style:normal; text-decoration:none }
+.titrepartie a:visited {   color:rgb(0,119,24); font-style:normal; text-decoration:none }
+.titrepartie a:hover {font-style:italic; font-style:normal;   color:rgb(0,149,54);}
+.titrepartie a:active {   color:rgb(0,119,24);font-style:normal; text-decoration:none}	
+
+.cardephemeride .contenu
+{
+	box-sizing:border-box;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	flex:1;
+	align-items:flex-start;
+}
+
+.cardephemeride h3 
+{
+		font: 19px "Open Sans",sans-serif;
+		font-weight:bold;
+		line-height: 22px;
+		text-transform:uppercase;
+		color: #8FBD00;
+		text-align:left;
+		margin-top:2px;
+		margin-bottom:2px;
+}
+
+.cardephemeride .titre
+{
+		text-align:left;
+		font-style:normal;
+		color:black;
+}
+
+.cardephemeride .lien
+{
+	align-self:flex-end;
+	bottom:0px;
+}
+
+
+@media screen and (min-width:729px) {
+.cardephemeride img
+{
+	width:200px;
+	max-height:250px;
+	margin-left:20px;
+	margin-right:20px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+.cardephemeride .texte
+{
+	color:black;
+	font-style:normal;
+	
+}
+
+.cardephemeride .titre
+{
+	font-size:19px;
+}
+
+}
+
+@media screen and (max-width:728px)
+{
+	
+.cardephemeride .image{	
+	width:25%;
+	min-width:70px;
+	padding-right:15px;
+	padding-top:8px;
+}
+	
+.cardephemeride img
+{
+	width:100%;
+	margin:auto;
+	margin-left:4px;
+	margin-right:4px;
+	padding-left:4px;
+	padding-right:4px;
+}
+
+.cardephemeride .texte
+{
+	display:none;
+}
+}
+
+
+
+
+/* Les cartes pour les cours */
+
+.cardcours
+{width:95%;
+box-sizing:border-box;
+display:-webkit-box;display:-ms-flexbox;display:flex;
+-ms-flex-direction:row;flex-direction:column;
+align-items:stretch;
+line-height:1.5;
+margin-bottom:1em;
+margin-left:1em;
+margin-right:1em;
+margin-top:1em;
+ /* background: linear-gradient(#d8d8d8, #fff);  */
+border-radius: 0px 0px 0px 0px;
+border-left:2px;
+border-color:black;
+}
+
+
+
+
+.cardcours a:link { color:#000080; font-style:normal; text-decoration:none }
+.cardcours a:visited { color:#000080; font-style:normal; text-decoration:none }
+.cardcours a:hover {font-style:italic; font-style:normal; color: #738CC6}
+.cardcours a:active { color:#000080; font-style:normal; text-decoration:none}	
+
+
+	
+
+.cardcours .titrecours
+{
+	border-radius: 0px 0px 0px 0px;
+	/* background: rgb(0,119,24); */
+	border-left:20px;
+	background:#ddd;
+	border-bottom:1px;
+	border-color:rgb(0,119,24);
+	/* background: linear-gradient(rgb(0,119,24), #A2CCB6); */
+    color:rgb(0,119,24);
+	font-size:17px;
+	/* margin-bottom:4px; */
+	padding-left:8px;
+}
+
+ .activecours, .titrecours:hover { 
+   color: #92bCa6; 
+  /* background: #fff; */
+ } 
+
+.cardcours .liste .listeone li {
+	background: url(../img/puce.png) no-repeat left 4px;
+	list-style-type:none;
+	margin:3px;
+	padding-left: 20px;
+}
+
+.cardcours .contenucours:hover {
+	background:#eee;
+	transition:3s;
+}
+
+.cardcours .contenucours
+{
+	display:none;
+	overflow:hidden;
+	background:#eee;
+}
+
+.titrecours:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 17px;
+  color: #fff;
+  float: right;
+  margin-left: 5px;
+}
+
+.activecours:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+@media screen and (min-width:729px) {
+
+.cardcours .liste
+{
+    column-count: 2;
+    -webkit-column-count:2;
+    -moz-column-count:2;        
+}
+
+}
+
+@media screen and (max-width:728px)
+{
+	
+.cardcours .liste
+{
+    column-count: 1;
+    -webkit-column-count:1;
+    -moz-column-count:1;        
+}
+}
+
+
