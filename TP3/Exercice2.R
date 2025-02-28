@@ -1,3 +1,6 @@
+# https://github.com/BreizhHardware/TD-R/tree/main/TP3
+
+
 # Spécifier un miroir CRAN
 options(repos = c(CRAN = "https://cran.rstudio.com/"))
 
