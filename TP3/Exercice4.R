@@ -81,7 +81,12 @@ valeurs <- c(valeurs_1979, valeurs_2010)
 
 boxplot(valeurs ~ annees,
         main = "Evolution de la distribution des superficies",
-        xlab = "Année",
+        xlab = "Annee",
         ylab = "Superficie (ha)",
         col = c("lightblue", "lightgreen"))
 grid()
+
+
+
+# Réinitialiser la mise en page
+par(mfrow = c(1, 1))
