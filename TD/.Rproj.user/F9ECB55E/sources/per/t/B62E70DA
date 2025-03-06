@@ -3,24 +3,24 @@
     "path": "C:/Users/BreizhHardware/Nextcloud/Programation/R/TD/Exo3.R",
     "project_path": "Exo3.R",
     "type": "r_source",
-    "hash": "340809373",
+    "hash": "1696507348",
     "contents": "",
-    "dirty": false,
+    "dirty": true,
     "created": 1733479137294.0,
     "source_on_save": false,
     "relative_order": 3,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "0,0",
-        "scrollLine": "0"
+        "cursorPosition": "38,8",
+        "scrollLine": "9"
     },
     "folds": "",
-    "lastKnownWriteTime": 1733479598,
+    "lastKnownWriteTime": 1733482451,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1733479598,
+    "last_content_update": 1734687486296,
     "read_only": false,
     "read_only_alternatives": []
 }
