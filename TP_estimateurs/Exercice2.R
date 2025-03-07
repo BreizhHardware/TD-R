@@ -1,3 +1,5 @@
+# https://github.com/BreizhHardware/TD-R/tree/main/TP_estimateurs
+
 # Création du tableau de contingence
 donnees <- matrix(
   c(33, 93, 55, 20, 16, 9,
@@ -5,6 +7,8 @@ donnees <- matrix(
     81, 34, 25, 6, 2, 1),
   nrow = 3, byrow = TRUE
 )
+
+n <- length(donnees)
 
 # Ajout des noms de lignes et colonnes
 rownames(donnees) <- c("Moins de 30 ans", "Entre 30 et 60 ans", "Plus de 60 ans")
