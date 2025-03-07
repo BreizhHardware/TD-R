@@ -35,19 +35,19 @@ sorties <- as.numeric(colnames(donnees))
 resultats <- data.frame(
   classe_age = rownames(donnees),
   effectif_total = rowSums(donnees),
-  moyenne = NA,
+  moyenne_ponderee = NA,
   variance = NA
 )
 
 for (i in 1:nrow(donnees)) {
   moy <- moyenne_ponderee(sorties, donnees[i,])
   var <- variance_non_biaisee(sorties, donnees[i,], moy)
-  resultats$moyenne[i] <- moy
+  resultats$moyenne_ponderee[i] <- moy
   resultats$variance[i] <- var
 }
 
 # Affichage des résultats arrondis
-resultats$moyenne <- round(resultats$moyenne, 2)
+resultats$moyenne_ponderee <- round(resultats$moyenne_ponderee, 2)
 resultats$variance <- round(resultats$variance, 2)
 print(resultats)
 
