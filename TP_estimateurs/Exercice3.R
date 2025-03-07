@@ -47,7 +47,6 @@ legend("topright",
 n <- 50
 p <- 0.13
 mu <- n * p
-sigma <- sqrt(n * p * (1-p))
 
 # Calcul exact avec la loi binomiale
 # P(F > 5) = 1 - P(F ≤ 5)
