@@ -19,7 +19,7 @@ colnames(donnees) <- c("0", "1", "2", "3", "4", "5")
 
 # Fonction pour calculer la moyenne pondérée
 moyenne_ponderee <- function(x, effectifs) {
-  sum(x * effectifs) / sum(effectifs)
+   sum(effectifs) / sum(x * effectifs)
 }
 
 # Fonction pour calculer la variance non biaisée
