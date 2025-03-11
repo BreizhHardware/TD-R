@@ -92,16 +92,10 @@ if ((proba1 < s1 || proba1 > i1) ||
   cat("Le dé n'est pas truqué\n")
 }
 
-# Visualisation graphique
-curve(dnorm(x, mean = moyenne, sd = ecart_type),
-      from = 0,
-      to = 7,
-      main = "Distribution des valeurs du dé",
-      xlab = "Valeur du dé",
-      ylab = "Densité")
+# Correction
 
-# Zone de probabilité avec transparence
-x_values <- seq(0, 6, length.out = 100)
-polygon(c(x_values, 1),
-        c(dnorm(x_values, moyenne, ecart_type), 0),
-        col = rgb(1, 0, 0, 0.5))
+x <- (88-100) ^ 2 + (109-100) ^ 2 + (107-100) ^ 2 + (94-100) ^ 2 + (105-100) ^ 2 + (97-100) ^ 2
+xprim <- x / 100
+
+xsq <- chisq.test(c(88, 109, 107, 94, 105, 97), p = c(1/6, 1/6, 1/6, 1/6, 1/6, 1/6))
+print(xsq)

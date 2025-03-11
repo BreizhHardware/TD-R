@@ -15,7 +15,7 @@ n <- length(poids)
 k <- sqrt(n)
 
 # Création de l'histogramme avec courbe de densité
-hist(poids,
+histoooo <- hist(poids,
      probability = TRUE,
      main = "Histogramme des poids des cocons",
      xlab = "Poids (g)",
@@ -74,7 +74,7 @@ curve(dnorm(x, mean = moyenne, sd = ecart_type),
 
 # Ajout d'une légende
 legend("topright",
-       legend = c("Densité normale estimée"),
+       legend = "Densité normale estimée",
        col = "red",
        lwd = 2)
 
@@ -101,6 +101,40 @@ cat("Intervalle de confiance à 95% pour la variance (σ²): [",
     round(borne_inf_variance, 6), ",",
     round(borne_sup_variance, 6), "] g²\n")
 
+# Affichage de l'histogramme des poids avec la courbe de densité estimée et les intervalles de confiance
+
+scale_factor = max(histoooo$counts) / max(dnorm(seq(min(poids), max(poids), length.out=1), mean=mean(poids), sd=sd(poids)))
+
+hist(poids,
+     main = "Histogramme des poids des cocons",
+     xlab = "Poids (g)",
+     ylab = "Densité",
+     col = "lightblue",
+     ylim = c(0, max(histoooo$counts) * scale_factor),
+     breaks = k)
+
+# Colorer l'intervalle de confiance
+x_vals <- seq(borne_inf_moyenne, borne_sup_moyenne, length.out = 100)
+y_vals <- dnorm(x_vals, mean = moyenne, sd = ecart_type)
+polygon(c(borne_inf_moyenne, x_vals, borne_sup_moyenne),
+        c(0, y_vals, 0),
+        col = rgb(0, 0, 1, 0.2),
+        border = NA)
+
+lines(density(poids), col="green", lwd=2)
+
+# Ajout de la courbe de densité normale
+curve(scale_factor * dnorm(x, mean=mean(poids), sd=sd(poids)),
+      add=TRUE,
+      col="red",
+      lwd=2)
+
+# Ajout des intervalles de confiance pour la moyenne
+abline(v = c(borne_inf_moyenne, borne_sup_moyenne),
+       col = "blue",
+       lty = 2)
+
+
 # Calcul des intervalles de confiance à 90%
 alpha <- 0.10
 z <- qnorm(1 - alpha / 2)
@@ -121,3 +155,38 @@ cat("\nIntervalle de confiance à 90% pour la moyenne (μ): [",
 cat("Intervalle de confiance à 90% pour la variance (σ²): [",
     round(borne_inf_variance, 6), ",",
     round(borne_sup_variance, 6), "] g²\n")
+
+# Ajout des intervalles de confiance pour la moyenne
+abline(v = c(borne_inf_moyenne, borne_sup_moyenne),
+       col = "purple",
+       lty = 2)
+
+# Colorer l'intervalle de confiance
+x_vals <- seq(borne_inf_moyenne, borne_sup_moyenne, length.out = 100)
+y_vals <- dnorm(x_vals, mean = moyenne, sd = ecart_type)
+polygon(c(borne_inf_moyenne, x_vals, borne_sup_moyenne),
+        c(0, y_vals, 0),
+        col = rgb(1, 0, 1, 0.2),
+        border = NA)
+
+# Ajout d'une légende
+legend("topright",
+       legend = c("Densité estimée", "Densité normale estimée", "Intervalle de confiance à 95%", "Intervalle de confiance à 90%"),
+       col = c("green", "red", "blue", "purple"),
+       lty = c(1, 1, 2, 2),
+       lwd = c(2, 2, 1, 1))
+
+# Crée un histogramme des poids et récupère les classes
+hist_obj <- hist(poids, plot = FALSE, breaks = k)
+observed_counts <- hist_obj$counts
+breaks <- hist_obj$breaks
+mids <- hist_obj$mids
+
+# Calcul des probabilités attendues
+total_count <- sum(observed_counts)
+expected_probs <- diff(pnorm(breaks, mean = moyenne, sd = ecart_type))
+expected_counts <- total_count * expected_probs
+
+# Perform chi-squared test
+chitest <- chisq.test(observed_counts, p = expected_probs, rescale.p = TRUE)
+print(chitest)
