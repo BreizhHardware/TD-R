@@ -44,3 +44,33 @@ for (j in (1:50)) {
   legend("topright", legend=c("Normale N(0,1)", "Cauchy"),
          col=c("darkblue", "darkred"), lwd=2)
 }
+
+# Définition des paramètres: lambda = paramètre de la loi exponentielle
+lambda = 2  # Taux de la loi exponentielle
+x = seq(-4, 4, 0.025)
+
+# Boucle principale qui effectue 50 itérations avec taille d'échantillon croissante
+for (j in (1:50)) {
+  # k = taille d'échantillon (j²), donc de 1 à 2500
+  k = j*j
+
+  # Calcul des paramètres théoriques: moyenne et écart-type
+  mu = 1/lambda  # Moyenne théorique de la loi exponentielle
+  sig = 1/(lambda * sqrt(k))  # Écart-type de la moyenne d'échantillon
+
+  for (i in (1:10000)) {
+    # Génération de k variables exponentielles, calcul de leur moyenne,
+    # puis normalisation: (moyenne-mu)/sigma
+    ms[i] = (mean(rexp(k, lambda)) - mu) / sig
+  }
+
+  # Tracé de l'histogramme des moyennes normalisées
+  hist(ms, breaks=41, xlab="x-variable", xlim=c(-4, 4),
+       prob=TRUE, main=sprintf("Loi normale vs moyennes d'exponentielles, n = %d", k))
+
+  # Superposition de la courbe de densité normale standard N(0,1)
+  curve(dnorm(x), col="darkblue", lwd=2, add=TRUE, yaxt="n")
+
+  # Légende
+  legend("topright", legend="Normale N(0,1)", col="darkblue", lwd=2)
+}
