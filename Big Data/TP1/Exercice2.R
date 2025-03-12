@@ -5,12 +5,14 @@ p=0.75; x=seq(-4,4,0.025);
 # Boucle principale qui effectue 50 itérations avec taille d'échantillon croissante
 for (j in(1:50)){
   # k = taille d'échantillon (j²), donc de 1 à 2500
-  k=j*j; for (i in (1:10000)){
+  k=j*j;
+  for (i in (1:10000)){
     # Calcul des paramètres théoriques d'une proportion: moyenne et écart-type
     sig=sqrt(p*(1-p)/k); mu=p;
     # Génération de k essais de Bernoulli, calcul de leur moyenne, 
     # puis normalisation: (moyenne-mu)/sigma
-    ms[i]=(mean(rbinom(k,1,p))-mu)/sig }
+    ms[i]=(mean(rbinom(k,1,p))-mu)/sig
+  }
   # Tracé de l'histogramme des moyennes normalisées
   hist(ms, breaks=41, xlab="x-variable", xlim=c(-4,4), prob=TRUE, main=sprintf("normal curve over histogram, n = %d",k))
   # Superposition de la courbe de densité normale standard N(0,1)
