@@ -78,7 +78,7 @@ for (i in 1:4) {
 
 # Afficher un résumé des données standardisées
 cat("Résumé des données standardisées:\n")
-summary(iris_standardized[, 1:4])
+print(summary(iris_standardized[, 1:4]))
 
 # Vérifier que la moyenne est proche de 0 et l'écart-type est proche de 1
 cat("\nVérification des moyennes (doivent être proches de 0):\n")
