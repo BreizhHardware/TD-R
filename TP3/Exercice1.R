@@ -2,7 +2,7 @@
 
 
 # Spécifier un miroir CRAN
-options(repos = c(CRAN = "https://cran.rstudio.com/"))
+options(repos = c(CRAN = "https://cran.irsn.fr/"))
 
 # Installer le package readxl
 install.packages("readxl")
