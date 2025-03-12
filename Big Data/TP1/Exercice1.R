@@ -67,18 +67,16 @@ for (species in species_levels) {
 # 4. On s'intéresse au 4 premières variables. Standardiser les données (retirer la moyenne
 # et diviser par l'écart-type).
 
-# Création d'un nouveau dataframe pour les données standardisées
-iris_standardized <- iris
-
-# Standardisation des 4 premières variables
-for (i in 1:4) {
-  var_name <- names(iris)[i]
-  iris_standardized[, i] <- scale(iris[, i])
-}
+# Standardisation des variables
+SL <- (iris$Sepal.Length-mean(iris$Sepal.Length))/sd(iris$Sepal.Length)
+SW <- (iris$Sepal.Width-mean(iris$Sepal.Width))/sd(iris$Sepal.Width)
+PL <- (iris$Petal.Length-mean(iris$Petal.Length))/sd(iris$Petal.Length)
+PW <- (iris$Petal.Width-mean(iris$Petal.Width))/sd(iris$Petal.Width)
 
 # Afficher un résumé des données standardisées
 cat("Résumé des données standardisées:\n")
-print(summary(iris_standardized[, 1:4]))
+iris_standardized <- data.frame(Sepal.Length=SL, Sepal.Width=SW, Petal.Length=PL, Petal.Width=PW)
+print(summary(iris_standardized))
 
 # Vérifier que la moyenne est proche de 0 et l'écart-type est proche de 1
 cat("\nVérification des moyennes (doivent être proches de 0):\n")
@@ -115,6 +113,38 @@ legend("topleft",
        legend=levels(iris$Species),
        col=iris_colors,
        pch=19)
+
+plot(SL,SW,col=iris_colors[as.numeric(iris$Species)], pch=19)
+legend(
+    "topright",
+    legend=levels(iris$Species),
+    col=iris_colors,
+    pch=19
+)
+
+plot(PL,PW,col=iris_colors[as.numeric(iris$Species)], pch=19)
+legend(
+  "topright",
+  legend=levels(iris$Species),
+  col=iris_colors,
+  pch=19
+)
+
+plot(SL,PW,col=iris_colors[as.numeric(iris$Species)], pch=19)
+legend(
+  "topright",
+  legend=levels(iris$Species),
+  col=iris_colors,
+  pch=19
+)
+
+plot(PL,SW,col=iris_colors[as.numeric(iris$Species)], pch=19)
+legend(
+  "topright",
+  legend=levels(iris$Species),
+  col=iris_colors,
+  pch=19
+)
 
 # 2. Matrice de nuages de points pour toutes les combinaisons
 pairs(iris[, 1:4],
