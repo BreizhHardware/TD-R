@@ -184,7 +184,6 @@ mids <- hist_obj$mids
 # Calcul des probabilités attendues
 total_count <- sum(observed_counts)
 expected_probs <- diff(pnorm(breaks, mean = moyenne, sd = ecart_type))
-expected_counts <- total_count * expected_probs
 
 # Perform chi-squared test
 chitest <- chisq.test(observed_counts, p = expected_probs, rescale.p = TRUE)
