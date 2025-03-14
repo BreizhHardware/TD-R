@@ -188,3 +188,6 @@ expected_probs <- diff(pnorm(breaks, mean = moyenne, sd = ecart_type))
 # Perform chi-squared test
 chitest <- chisq.test(observed_counts, p = expected_probs, rescale.p = TRUE)
 print(chitest)
+
+kstest <- ks.test(poids, "pnorm", mean = moyenne, sd = ecart_type)
+print(kstest)
