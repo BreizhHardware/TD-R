@@ -16,7 +16,6 @@ k <- sqrt(n)
 
 # Création de l'histogramme avec courbe de densité
 histoooo <- hist(poids,
-     probability = TRUE,
      main = "Histogramme des poids des cocons",
      xlab = "Poids (g)",
      ylab = "Densité",
@@ -59,7 +58,6 @@ cat("Estimation de l'écart-type (σ̂):", round(ecart_type, 4), "g\n")
 
 # Création du graphique avec la courbe de densité estimée
 hist(poids,
-     probability = TRUE,
      main = "Distribution des poids avec courbe normale estimée",
      xlab = "Poids (g)",
      ylab = "Densité",
@@ -103,7 +101,8 @@ cat("Intervalle de confiance à 95% pour la variance (σ²): [",
 
 # Affichage de l'histogramme des poids avec la courbe de densité estimée et les intervalles de confiance
 
-scale_factor = max(histoooo$counts) / max(dnorm(seq(min(poids), max(poids), length.out=1), mean=mean(poids), sd=sd(poids)))
+max_density <- max(dnorm(seq(min(poids), max(poids), length.out=100), mean=moyenne, sd=ecart_type))
+scale_factor <- 80 / max_density
 
 hist(poids,
      main = "Histogramme des poids des cocons",
