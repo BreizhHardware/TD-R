@@ -13,72 +13,84 @@ alpha <- 0.05                     # Niveau de signification 5%
 moyenne <- mean(epaisseurs)
 ecart_type_echantillon <- sd(epaisseurs)
 
-# Calcul de la statistique du test z
-z_stat <- (moyenne - mu0) / (sigma / sqrt(n))
-p_value <- 2 * pnorm(-abs(z_stat))  # Test bilatéral
+# Nombre de classes pour l'histogramme
+k <- ceiling(sqrt(n))
 
-# Valeur critique pour un test bilatéral avec α = 0.05
-z_critique <- qnorm(1 - alpha/2)
-
-# Affichage des résultats
+# Affichage des statistiques descriptives
 cat("Analyse des épaisseurs des composants isolants\n")
 cat("---------------------------------------------\n")
 cat(sprintf("Nombre d'observations: %d\n", n))
 cat(sprintf("Moyenne des épaisseurs: %.4f mm\n", moyenne))
 cat(sprintf("Écart-type échantillon: %.4f mm\n", ecart_type_echantillon))
 cat(sprintf("Écart-type connu: %.4f mm\n", sigma))
-cat("\nTest d'hypothèse\n")
-cat(sprintf("H0: μ = %.1f mm (le fournisseur respecte ses engagements)\n", mu0))
-cat(sprintf("H1: μ ≠ %.1f mm (le fournisseur ne respecte pas ses engagements)\n", mu0))
-cat(sprintf("Statistique z calculée: %.4f\n", z_stat))
-cat(sprintf("Valeur critique (α = %.2f): ±%.4f\n", alpha, z_critique))
-cat(sprintf("p-value: %.4f\n", p_value))
 
-# Conclusion
+# Création des classes pour l'histogramme et calcul des fréquences observées
+hist_obj <- hist(epaisseurs, plot = FALSE, breaks = k)
+observed_counts <- hist_obj$counts
+breaks <- hist_obj$breaks
+mids <- hist_obj$mids
+
+# Calcul des fréquences théoriques selon N(7.3, 0.38²)
+expected_probs <- diff(pnorm(breaks, mean = mu0, sd = sigma))
+expected_counts <- expected_probs * n
+
+# Test du chi-deux
+chi_stat <- sum((observed_counts - expected_counts)^2 / expected_counts)
+df <- length(observed_counts) - 1  # Degrés de liberté
+p_value_chi <- pchisq(chi_stat, df = df, lower.tail = FALSE)
+
+# Valeur critique pour le chi-deux
+chi_critique <- qchisq(1 - alpha, df = df)
+
+# Affichage des résultats du test chi-deux
+cat("\nTest d'hypothèse (chi-deux)\n")
+cat(sprintf("H0: La distribution suit une loi N(%.1f, %.2f²) (le fournisseur respecte ses engagements)\n", mu0, sigma))
+cat(sprintf("H1: La distribution ne suit pas une loi N(%.1f, %.2f²) (le fournisseur ne respecte pas ses engagements)\n", mu0, sigma))
+cat(sprintf("Statistique chi-deux calculée: %.4f\n", chi_stat))
+cat(sprintf("Valeur critique (α = %.2f, dl = %d): %.4f\n", alpha, df, chi_critique))
+cat(sprintf("p-value: %.4f\n", p_value_chi))
+
+# Conclusion du test chi-deux
 cat("\nConclusion:\n")
-if (abs(z_stat) > z_critique) {
-  cat(sprintf("Comme |z| = %.4f > %.4f et p-value = %.4f < %.2f, nous rejetons H0.\n",
-              abs(z_stat), z_critique, p_value, alpha))
+if (chi_stat > chi_critique) {
+  cat(sprintf("Comme χ² = %.4f > %.4f et p-value = %.4f < %.2f, nous rejetons H0.\n",
+              chi_stat, chi_critique, p_value_chi, alpha))
   cat("L'entreprise peut affirmer, avec un risque faible de se tromper, que le fournisseur ne respecte pas ses engagements.\n")
 } else {
-  cat(sprintf("Comme |z| = %.4f < %.4f et p-value = %.4f > %.2f, nous ne pouvons pas rejeter H0.\n",
-              abs(z_stat), z_critique, p_value, alpha))
+  cat(sprintf("Comme χ² = %.4f < %.4f et p-value = %.4f > %.2f, nous ne pouvons pas rejeter H0.\n",
+              chi_stat, chi_critique, p_value_chi, alpha))
   cat("L'entreprise ne peut pas affirmer, avec un risque faible de se tromper, que le fournisseur ne respecte pas ses engagements.\n")
 }
 
 # Représentation graphique
-k <- sqrt(n)
-
 hist(epaisseurs,
-     breaks = k,
+     breaks = breaks,
      col = "lightblue",
      main = "Distribution des épaisseurs des composants",
      xlab = "Épaisseur (mm)",
-     ylab = "Fréquence")
+     ylab = "Fréquence",
+     freq = TRUE)
+
+# Tracer la distribution théorique
+curve(dnorm(x, mean = mu0, sd = sigma) * n * (breaks[2] - breaks[1]),
+      col = "darkblue",
+      lwd = 2,
+      add = TRUE)
 
 # Ajout de lignes verticales pour la moyenne échantillon et la moyenne annoncée
 abline(v = moyenne, col = "red", lwd = 2)
 abline(v = mu0, col = "blue", lwd = 2, lty = 2)
 
-# Ajout de la courbe de densité normale estimée
-curve(dnorm(x, mean = moyenne, sd = sigma),
-      add = TRUE,
-      col = "darkgreen",
-      lwd = 2)
-
 # Légende
 legend("topright",
        legend = c(paste("Moyenne échantillon:", round(moyenne, 4), "mm"),
                   paste("Moyenne annoncée:", mu0, "mm"),
-                  "Densité normale estimée"),
-       col = c("red", "blue", "darkgreen"),
+                  "Distribution théorique N(7.3, 0.38²)"),
+       col = c("red", "blue", "darkblue"),
        lwd = c(2, 2, 2),
        lty = c(1, 2, 1))
 
-# Intervalle de confiance pour la moyenne
-marge_erreur <- z_critique * sigma / sqrt(n)
-IC_inf <- moyenne - marge_erreur
-IC_sup <- moyenne + marge_erreur
-
-cat(sprintf("\nIntervalle de confiance à %.0f%% pour la moyenne: [%.4f, %.4f]\n",
-            (1-alpha)*100, IC_inf, IC_sup))
+# Alternative avec la fonction intégrée
+cat("\nRésultat avec la fonction intégrée chisq.test():\n")
+chitest <- chisq.test(observed_counts, p = expected_probs, rescale.p = TRUE)
+print(chitest)
