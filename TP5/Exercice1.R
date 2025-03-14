@@ -47,8 +47,10 @@ if (abs(z_stat) > z_critique) {
 }
 
 # Représentation graphique
+k <- sqrt(n)
+
 hist(epaisseurs,
-     breaks = "FD",
+     breaks = k,
      col = "lightblue",
      main = "Distribution des épaisseurs des composants",
      xlab = "Épaisseur (mm)",
