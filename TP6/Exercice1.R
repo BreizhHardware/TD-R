@@ -1,3 +1,5 @@
+# https://github.com/BreizhHardware/TD-R/tree/main/TP6
+
 # Données observées
 observed <- c(B = 84, J = 79, R = 75, O = 49, V = 36, D = 47)
 total <- sum(observed)
