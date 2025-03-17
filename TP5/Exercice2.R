@@ -19,7 +19,10 @@ cat(sprintf("Contenu moyen: %.4f litres\n", moyenne))
 cat(sprintf("Écart-type échantillon: %.4f litres\n", ecart_type))
 
 # Nombre de classes pour l'histogramme (adapté pour petit échantillon)
-k <- ceiling(sqrt(n))  # Formule classique: racine carrée de n
+k <- ceiling(sqrt(n))
+cat(sprintf("Nombre de classes pour l'histogramme: %d\n", k))
+# Création d'une séquence de classes pour l'histogramme
+seq_classes <- seq(9.5, 10.5, by=0.25)
 
 # Création des classes pour l'histogramme et calcul des fréquences observées
 hist_obj <- hist(contenus, plot = FALSE, breaks = k)
@@ -68,7 +71,7 @@ if (chi_stat > chi_critique) {
 
 # Représentation graphique
 hist(contenus,
-     breaks = breaks,
+     breaks = seq_classes,
      col = "lightblue",
      main = "Distribution du contenu des récipients",
      xlab = "Contenu (litres)",
@@ -106,7 +109,17 @@ cat("5 observations attendues pour une meilleure fiabilité.\n")
 
 # Afficher les effectifs par classe
 cat("\nEffectifs par classe:\n")
-for(i in 1:length(observed_counts)) {
+for(i in seq_along(observed_counts)) {
   cat(sprintf("Classe %d [%.2f-%.2f]: Observés = %.0f, Attendus = %.2f\n",
               i, breaks[i], breaks[i+1], observed_counts[i], expected_counts[i]))
 }
+
+# Vérification avec le test de Kolmogorov-Smirnov
+ks_test <- ks.test(contenus, "pnorm", mean = mu0, sd = ecart_type)
+cat("\nRésultat du test de Kolmogorov-Smirnov:\n")
+print(ks_test)
+
+# Comparaison des p-values des deux tests
+cat("\nComparaison des p-values:\n")
+cat(sprintf("Test du chi-deux: %.4f\n", chitest$p.value))
+cat(sprintf("Test de Kolmogorov-Smirnov: %.4f\n", ks_test$p.value))
