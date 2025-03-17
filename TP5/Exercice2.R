@@ -79,10 +79,10 @@ hist(contenus,
      freq = TRUE)
 
 # Tracer la distribution théorique
-curve(dnorm(x, mean = mu0, sd = ecart_type) * n * (breaks[2] - breaks[1]),
-      col = "darkblue",
-      lwd = 2,
-      add = TRUE)
+max_density <- max(dnorm(seq(min(contenus), max(contenus), length.out=100), mean=moyenne, sd=ecart_type))
+scale_factor <- 4 / max_density  # Ajuste pour que le sommet de la courbe atteigne 11
+# Tracer la courbe ajustée
+curve(scale_factor * dnorm(x, mean = moyenne, sd = ecart_type), add = TRUE, col = "red")
 
 # Ajout de lignes verticales pour la moyenne échantillon et la valeur de référence
 abline(v = moyenne, col = "red", lwd = 2)
@@ -123,3 +123,14 @@ print(ks_test)
 cat("\nComparaison des p-values:\n")
 cat(sprintf("Test du chi-deux: %.4f\n", chitest$p.value))
 cat(sprintf("Test de Kolmogorov-Smirnov: %.4f\n", ks_test$p.value))
+
+# Verification avec le test de Student
+t_test <- t.test(contenus, mu = mu0)
+cat("\nRésultat du test de Student:\n")
+print(t_test)
+
+# Comparaison des p-values des trois tests
+cat("\nComparaison des p-values:\n")
+cat(sprintf("Test du chi-deux: %.4f\n", chitest$p.value))
+cat(sprintf("Test de Kolmogorov-Smirnov: %.4f\n", ks_test$p.value))
+cat(sprintf("Test de Student: %.4f\n", t_test$p.value))
