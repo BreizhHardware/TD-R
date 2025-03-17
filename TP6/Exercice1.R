@@ -56,7 +56,7 @@ if (chi_squared > critical_value) {
 
 # Vérification avec la fonction intégrée
 cat("\nRésultat avec la fonction intégrée chisq.test():\n")
-print(chisq.test(observed, p = expected_props))
+chi_test <- chisq.test(observed, p = expected_props)
 
 # Graphique comparatif
 barplot_data <- rbind(observed, expected)
@@ -66,4 +66,24 @@ barplot(barplot_data, beside = TRUE, col = c("lightblue", "lightgreen"),
         ylab = "Nombre de bonbons", ylim = c(0, max(barplot_data) * 1.2))
 legend("topright", legend = c("Observé", "Attendu"), fill = c("lightblue", "lightgreen"))
 
-# V
+# Vérification avec un test de Kolmogorov-Smirnov
+cat("\nTest de Kolmogorov-Smirnov\n")
+cat("-------------------------\n")
+cat("H0: Les distributions observée et attendue sont identiques.\n")
+cat("H1: Les distributions observée et attendue sont différentes.\n\n")
+
+# Créer des échantillons pour le test KS en répétant chaque catégorie selon sa fréquence
+observed_sample <- rep(seq_along(observed), observed)
+expected_sample <- rep(seq_along(expected), round(expected))
+
+# Exécuter le test KS
+ks_test <- ks.test(observed_sample, expected_sample)
+cat("Résultat avec la fonction intégrée ks.test():\n")
+print(ks_test)
+
+# Comparaison avec le test du chi-deux dans un tableau
+cat("\nComparaison des p values\n")
+cat("-------------------\n")
+cat("KS test  Chi-deux test\n")
+  cat(sprintf("%5.1f    %6.3f\n",
+              ks_test$p.value, chi_test$p.value))
