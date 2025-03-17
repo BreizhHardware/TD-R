@@ -1,5 +1,5 @@
 # Données observées
-observed <- c(B = 84, J = 79, R = 75, O = 40, V = 36, D = 47)
+observed <- c(B = 84, J = 79, R = 75, O = 49, V = 36, D = 47)
 total <- sum(observed)
 
 # Proportions attendues selon le responsable de communication
@@ -65,3 +65,5 @@ barplot(barplot_data, beside = TRUE, col = c("lightblue", "lightgreen"),
         main = "Distribution des couleurs des bonbons Yopy",
         ylab = "Nombre de bonbons", ylim = c(0, max(barplot_data) * 1.2))
 legend("topright", legend = c("Observé", "Attendu"), fill = c("lightblue", "lightgreen"))
+
+# V
