@@ -102,11 +102,6 @@ cat("\nRésultat avec la fonction intégrée chisq.test():\n")
 chitest <- chisq.test(observed_counts, p = expected_probs, rescale.p = TRUE)
 print(chitest)
 
-# Note sur la fiabilité du test avec petit échantillon
-cat("\nNote sur la fiabilité: Avec seulement 12 observations, le test du chi-deux\n")
-cat("peut manquer de puissance. Vérifiez que chaque classe contient au moins\n")
-cat("5 observations attendues pour une meilleure fiabilité.\n")
-
 # Afficher les effectifs par classe
 cat("\nEffectifs par classe:\n")
 for(i in seq_along(observed_counts)) {
