@@ -87,5 +87,5 @@ print(ks_test)
 cat("\nComparaison des p values\n")
 cat("-------------------\n")
 cat("KS test  Chi-deux test\n")
-  cat(sprintf("%5.1f    %6.3f\n",
+  cat(sprintf("%.3f    %.3f\n",
               ks_test$p.value, chi_test$p.value))

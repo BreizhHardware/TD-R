@@ -73,3 +73,20 @@ for(i in 1:12) {
   ecart <- sqrt(((admissions[i] - attendues[i])^2 / attendues[i]) * 100)
   cat(sprintf("%4d | %8d | %8.1f | %8.4f\n", i, admissions[i], attendues[i], ecart))
 }
+
+# Vérification avec un test de Kolmogorov-Smirnov
+cat("\nTest de Kolmogorov-Smirnov\n")
+cat("-------------------------\n")
+cat("H0: Les distributions observée et attendue sont identiques.\n")
+
+# Convertir en distribution cumulative pour KS test
+prob_theorique <- rep(1/12, 12)
+ks_test <- ks.test(admissions/sum(admissions), prob_theorique)
+print(ks_test)
+
+# Comparaison avec le test du chi-deux dans un tableau
+cat("\nComparaison des p values\n")
+cat("-------------------\n")
+cat("KS test  Chi-deux test\n")
+cat(sprintf("%.3f    %.3f\n",
+            ks_test$p.value, chi_test$p.value))
